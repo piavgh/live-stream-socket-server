@@ -34,7 +34,7 @@ wss.on('connection', (ws, req) => {
   const params = new URLSearchParams(queryString)
   const key = params.get('key')
 
-  const rtmpUrl = `rtmps://global-live.mux.com/app/${key}`
+  const rtmpUrl = `rtmp://a.rtmp.youtube.com/live2/${key}`
 
   const ffmpeg = child_process.spawn('ffmpeg', [
     '-i', '-',
